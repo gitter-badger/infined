@@ -4,13 +4,13 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     clean: {
-      all: ['build/'],
-      gfx: ['build/gfx/'],
-      lib: ['build/lib/'],
-      js: ['build/js/'],
-      css: ['build/css/'],
-      typed: ['build/typed/'],
-      html: ['build/index.html']
+      all: ['www/'],
+      gfx: ['www/gfx/'],
+      lib: ['www/lib/'],
+      js: ['www/js/'],
+      css: ['www/css/'],
+      typed: ['www/typed/'],
+      html: ['www/index.html']
     },
     
     includereplace: {
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
     'html-prettyprinter': {
       single: {
         src: 'src/tmp/index.ugly.html',
-        dest: 'build/index.html'
+        dest: 'www/index.html'
       }
     },
     
@@ -35,7 +35,7 @@ module.exports = function (grunt) {
             expand: true,
             src: ['lib/**', 'gfx/**', 'ws/**'],
             cwd: 'src/',
-            dest: 'build/'
+            dest: 'www/'
           }
         ]
       },
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
             expand: true,
             src: ['lib/**'],
             cwd: 'src/',
-            dest: 'build/'
+            dest: 'www/'
           }
         ]
       },
@@ -55,19 +55,19 @@ module.exports = function (grunt) {
             expand: true,
             src: ['gfx/**'],
             cwd: 'src/',
-            dest: 'build/'
+            dest: 'www/'
           }
         ]
       }
     },
     
-    ts: {
+    _ts: {
       dist: {
         files: [{
           expand: true,
           cwd: 'src/ts/',
           src: ['ts/angular/**', 'ts/jquery/**'],
-          dest: 'build/js',
+          dest: 'www/js',
           ext: '.ts'
         }] 
       }  
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'src/sass/',
           src: ['*.scss'],
-          dest: 'build/css',
+          dest: 'www/css',
           ext: '.css'
         }]
       }
@@ -88,7 +88,7 @@ module.exports = function (grunt) {
     typescript: {
       base: {
         src: ['src/ts/**/*.ts'],
-        dest: 'build/js/',
+        dest: 'www/js/',
         options: {
           module: 'amd', //or commonjs 
           target: 'es5', //or es3 
