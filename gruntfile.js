@@ -4,26 +4,26 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     clean: {
-      all: ['www/'],
+/*      all: ['www/'],
       gfx: ['www/gfx/'],
       lib: ['www/lib/'],
       js: ['www/js/'],
       css: ['www/css/'],
       typed: ['www/typed/'],
-      html: ['www/index.html']
+      html: ['www/index.html']*/
     },
     
-    includereplace: {
+    'html-prettyinclude': {
       dist: {
         options: {},
-        src: 'src/index.dev.html',
-        dest: 'src/tmp/index.ugly.html'
+        src: 'www/views/index.html',
+        dest: 'www/views/inde.x.html'
       }
     },
     
     'html-prettyprinter': {
       single: {
-        src: 'src/tmp/index.ugly.html',
+        src: 'www/views/inde.x.html',
         dest: 'www/index.html'
       }
     },
@@ -137,7 +137,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-typescript');
   
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('compile', ['clean:all', 'includereplace', 'html-prettyprinter', 'copy', 'sass', 'typescript']);
+  grunt.registerTask('compile', ['clean:all', 'html-prettyinclude', 'html-prettyprinter', 'copy', 'sass', 'typescript']);
   // TODO build task bauen für live deployment -> Achtung livereload.js dafür auf index.dev.html entfernen, sonst wie compile
 
 };
