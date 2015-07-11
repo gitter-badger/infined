@@ -4,16 +4,16 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     clean: {
-/*      all: ['www/'],
-      gfx: ['www/gfx/'],
-      lib: ['www/lib/'],
-      js: ['www/js/'],
-      css: ['www/css/'],
-      typed: ['www/typed/'],
-      html: ['www/index.html']*/
+      all:   ['www/public'],
+      images:   ['www/public/images/'],
+      libraries:   ['www/public/libraries/'],
+      scripts:    ['www/public/javascripts/'],
+      styles:   ['www/public/stylessheets/'],
+      types: ['www/public/types/'],
+      views:  ['www/public/index.html']
     },
     
-    'html-prettyinclude': {
+    'index-prettyinclude': {
       dist: {
         options: {},
         src: 'www/views/index.html',
@@ -21,53 +21,53 @@ module.exports = function (grunt) {
       }
     },
     
-    'html-prettyprinter': {
+    'index-prettyprinter': {
       single: {
         src: 'www/views/inde.x.html',
         dest: 'www/index.html'
       }
     },
     
-    copy: {
+    'public': {
       main: {
         files: [
           {
             expand: true,
-            src: ['lib/**', 'gfx/**', 'ws/**'],
-            cwd: 'src/',
-            dest: 'www/'
+            src: ['www/libraries/**', 'www/images/**', 'www/services/**'],
+            cwd: 'www/',
+            dest: 'public/'
           }
         ]
       },
-      lib: {
+      libraries: {
         files: [
           {
             expand: true,
-            src: ['lib/**'],
-            cwd: 'src/',
-            dest: 'www/'
+            src: ['libraries/**'],
+            cwd: 'www/',
+            dest: 'public/libraries/'
           }
         ]
       },
-      gfx: {
+      images: {
         files: [
           {
             expand: true,
-            src: ['gfx/**'],
-            cwd: 'src/',
-            dest: 'www/'
+            src: ['images/**'],
+            cwd: 'www/',
+            dest: 'public/images/'
           }
         ]
       }
     },
     
-    _ts: {
+    types: {
       dist: {
         files: [{
           expand: true,
-          cwd: 'src/ts/',
-          src: ['ts/angular/**', 'ts/jquery/**'],
-          dest: 'www/js',
+          cwd: 'www/',
+          src: ['types/angular/**', 'types/jquery/**'],
+          dest: 'www/public/javascripts',
           ext: '.ts'
         }] 
       }  
@@ -77,9 +77,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'src/sass/',
+          cwd: 'www/sass/',
           src: ['*.scss'],
-          dest: 'www/css',
+          dest: 'www/public/stylesheets',
           ext: '.css'
         }]
       }
@@ -87,8 +87,8 @@ module.exports = function (grunt) {
     
     typescript: {
       base: {
-        src: ['src/ts/**/*.ts'],
-        dest: 'www/js/',
+        src: ['www/types/**/*.ts'],
+        dest: 'www/public/javascripts/',
         options: {
           module: 'amd', //or commonjs 
           target: 'es5', //or es3 
@@ -103,24 +103,24 @@ module.exports = function (grunt) {
       options: {
         livereload: true
       },
-      html: {
-        files: ['src/index.dev.html', 'src/html/**'],
-        tasks: ['clean:html', 'includereplace', 'html-prettyprinter']
+      views: {
+        files: ['www/index.html', 'www/public/**'],
+        tasks: ['clean:views', 'html-prettyinclude', 'html-prettyprinter']
       },
       sass: {
-        files: ['src/sass/**'],
+        files: ['www/sass/**'],
         tasks: ['clean:css', 'sass']
       },
-      lib: {
-        files: ['lib/**'],
-        tasks: ['clean:lib', 'copy:lib']
+      libraries: {
+        files: ['www/libraries/**'],
+        tasks: ['clean:lib', 'copy:libraries']
       },
-      gfx: {
-        files: ['src/gfx/**'],
-        tasks: ['clean:gfx', 'copy:gfx']
+      images: {
+        files: ['www/images/**'],
+        tasks: ['clean:gfx', 'copy:images']
       },
       typescript: {
-        files: ['src/ts/**'],
+        files: ['www/types/**'],
         tasks: ['clean:js', 'typescript']
       }
     }
@@ -137,7 +137,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-typescript');
   
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('compile', ['clean:all', 'html-prettyinclude', 'html-prettyprinter', 'copy', 'sass', 'typescript']);
-  // TODO build task bauen für live deployment -> Achtung livereload.js dafür auf index.dev.html entfernen, sonst wie compile
+  grunt.registerTask('compile', ['clean:all', 'index-prettyinclude', 'index-prettyprinter', 'public', 'sass', 'typescript']);
 
 };
