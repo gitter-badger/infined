@@ -69,7 +69,7 @@ module.exports = function (grunt) {
           src: ['ts/angular/**', 'ts/jquery/**'],
           dest: 'build/js',
           ext: '.ts'
-        }]
+        }] 
       }  
     },
 
