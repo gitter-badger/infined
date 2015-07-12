@@ -24,7 +24,7 @@
     "bower": "1.4.1",
     "bower-installer": "1.2.0",
     "cordova": "5.1.1",
-    "ionic": "1.5.5",
+    "ionic": "1.0.0",
     "tsd": "0.6.1",
     "tslint": "2.2.0-beta",
     "typescript": "1.5.0-beta",

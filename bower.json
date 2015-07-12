@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "cordova": "5.1.1",
-    "ionic": "1.5.5",
+    "ionic": "1.0.0",
     "ionic-material": "0.4.2",
     "ion-md-input": "0.0.2",
     "lodash": "3.9.0",
