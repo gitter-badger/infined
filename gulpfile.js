@@ -210,7 +210,7 @@ gulp.task('ts:typescripts', ['ts:typescripts-read-me'], function (cb) {
   }
 
   return gulp.src(paths.typescripts)
-    .pipe(gulp.dest('www/public/javascripts'));
+    .pipe(gulp.dest('www/public/javascripts/types'));
 });
 
 /**
@@ -377,7 +377,7 @@ gulp.task('clean:ts', function (cb) {
     'www/public/javascripts/bundle.js',
     'www/public/javascripts/bundle.js.map',
     'www/public/javascripts/declare.js',
-    'www/public/javascripts/ionic'
+    'www/public/javascripts/types'
   ], cb);
 });
 
