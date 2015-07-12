@@ -16,8 +16,8 @@ var xpath = require("xpath");
 var XmlDom = require("xmldom").DOMParser;
 
 var paths = {
-  ts: ['./typescripts/**/*.ts'],
-  www: ['./www/**/*.*'],
+  root: ['./www/public/**/*.*'],
+  typescripts: ['./typescripts/**/*.ts'],
   chromeIcon: ['./www/resources/icon.png'],
   chromeManifest: ['./chrome-manifest.json']
 };
@@ -94,7 +94,7 @@ gulp.task('default', function (cb) {
  * refresh the browser window during development.
  */
 gulp.task('watch', function() {
-  gulp.watch(paths.ts, ['ts']);
+  gulp.watch(paths.typescripts, ['ts']);
 });
 
 /**
@@ -123,7 +123,7 @@ gulp.task('emulate-android', ['ts'], function(cb) {
  * Performs linting of the TypeScript source code.
  */
 gulp.task('lint', function (cb) {
-  gulp.src(paths.ts)
+  gulp.src(paths.typescripts)
   .pipe(tslint())
   .pipe(tslint.report(tsLintReporter));
 });
@@ -133,7 +133,6 @@ gulp.task('lint', function (cb) {
  * directory and rebuild the tsd.d.ts typings bundle.
  */
 gulp.task('tsd', function (cb) {
-
   // First reinstall any missing definitions to the typings directory.
   exec("tsd reinstall", function (err, stdout, stderr) {
     console.log(stdout);
@@ -154,7 +153,7 @@ gulp.task('tsd', function (cb) {
 });
 
 /**
- * Used to generate the www/javascripts/declare.js file which contains information about
+ * Used to generate the www/public/javascripts/declare.js file which contains information about
  * the build (such as version number, timestamp, and build scheme).
  * 
  * The version number is taken from the config.xml file.
@@ -179,8 +178,8 @@ gulp.task('ts:declare', function (cb) {
     console.log("error parsing version from config.xml; using 0.0.0 instead.", err);
   }
 
-  // Create the structure of the buildVars variable.
-  var buildVarsJson = JSON.stringify({
+  // Create the structure of the declare variable.
+  var declareJson = JSON.stringify({
     majorVersion: majorVersion,
     minorVersion: minorVersion,
     buildVersion: buildVersion,
@@ -189,16 +188,16 @@ gulp.task('ts:declare', function (cb) {
   });
 
   // Write the [declare] variable with code that will define it as a global object.
-  var buildVarsJs = "window.declare = " + buildVarsJson  + ";";
+  var declareJs = "window.declare = " + declareJson  + ";";
 
   // Write the file out to disk.
-  fs.writeFileSync('www/public/javascripts/declare.js', buildVarsJs, { encoding: 'utf8' });
+  fs.writeFileSync('www/public/javascripts/declare.js', declareJs, { encoding: 'utf8' });
 
   cb();
 });
 
 /**
- * Used to copy the entire TypeScript source into the www/javascripts/src directory so that
+ * Used to copy the entire TypeScript source into the www/javascripts directory so that
  * it can be used for debugging purposes.
  * 
  * This will only copy the files if the build scheme is not set to release.
@@ -210,12 +209,12 @@ gulp.task('ts:typescripts', ['ts:typescripts-read-me'], function (cb) {
     return;
   }
 
-  return gulp.src(paths.ts)
-    .pipe(gulp.dest('www/public/javascripts/src'));
+  return gulp.src(paths.typescripts)
+    .pipe(gulp.dest('www/public/javascripts'));
 });
 
 /**
- * Used to add a readme file to www/js/src to explain what the directory is for.
+ * Used to add a readme file to www/public/javascripts/ to explain what the directory is for.
  * 
  * This will only copy the files if the build scheme is not set to release.
  */
@@ -229,7 +228,7 @@ gulp.task('ts:typescripts-read-me', function (cb) {
   var infoMessage = "This directory contains a copy of the TypeScript source files for debug builds; it can be safely deleted and will be regenerated via the gulp ts task.\n\nTo omit this directory create a release build by specifying the scheme:\ngulp ts --scheme release";
   
   return string_src('readme.txt', infoMessage)
-    .pipe(gulp.dest('www/public/javascripts/src/'));
+    .pipe(gulp.dest('www/public/javascripts'));
 });
 
 /**
@@ -237,9 +236,8 @@ gulp.task('ts:typescripts-read-me', function (cb) {
  * chrome directory.
  */
 gulp.task('chrome', ['ts'], function (cb) {
-  
   // Copy the www payload.
-  gulp.src(paths.www)
+  gulp.src(paths.root)
     .pipe(gulp.dest('chrome'))
     .on('end', function() {
       
@@ -379,7 +377,7 @@ gulp.task('clean:ts', function (cb) {
     'www/public/javascripts/bundle.js',
     'www/public/javascripts/bundle.js.map',
     'www/public/javascripts/declare.js',
-    'www/public/javascripts/src'
+    'www/public/javascripts/ionic'
   ], cb);
 });
 

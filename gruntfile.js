@@ -11,13 +11,14 @@ module.exports = function (grunt) {
       libraries:   ['www/public/libraries/'],
       service:   ['www/public/service/'],
       stylesheets:   ['www/public/stylesheets/'],
+      templates:   ['www/public/templates/'],
       typescripts: ['www/public/typescripts/']
     },
     
     includereplace: {
       dist: {
         options: {},
-        src: 'www/views/index.html',
+        src: 'www/views/index.ionic.html',
         dest: 'www/views/inde.x.html'
       }
     },
@@ -34,7 +35,7 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            src: ['www/images/**', 'www/javascripts/**', 'www/stylesheets/**', 'www/libraries/**', 'www/service/**'],
+            src: ['www/images/**', 'www/javascripts/**', 'www/libraries/**', 'www/service/**', 'www/stylesheets/**', 'www/templates/**'],
             cwd: 'www/',
             dest: 'public/'
           }
@@ -85,6 +86,16 @@ module.exports = function (grunt) {
           {
             expand: true,
             src: ['stylesheets/**'],
+            cwd: 'www/',
+            dest: 'www/public/'
+          }
+        ]
+      },
+      templates: {
+        files: [
+          {
+            expand: true,
+            src: ['templates/**'],
             cwd: 'www/',
             dest: 'www/public/'
           }

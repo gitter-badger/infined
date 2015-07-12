@@ -7,12 +7,12 @@ abstract
 node_modules
 bower_components
 
-www/public
-www/public/images
-www/public/libraries
-www/public/javascripts
-www/public/service
-www/public/stylesheets
+www\public
+www\public\images
+www\public\libraries
+www\public\javascripts
+www\public\service
+www\public\stylesheets
 
 plugins
 platforms

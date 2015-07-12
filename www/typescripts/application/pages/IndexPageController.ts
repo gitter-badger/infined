@@ -47,8 +47,8 @@ module ft.pages{
     
     scope: IndexPageScope;
     private $http:ng.IHttpService;
-    private API_URL_UPCOMINGLIST:string = '../../service/upcoming.json'; // Use mocked data
-    private API_URL_THEATERSLIST:string = '../../service/theaters.json'; // Use mocked data
+    private API_URL_UPCOMINGLIST:string = 'service/upcoming.json'; // Use mocked data
+    private API_URL_THEATERSLIST:string = 'service/theaters.json'; // Use mocked data
     private movies:Movies.Movie[] = [];
     private tabState:Movies.MovieType = {upcoming:{active:' active'}, theater:{active:''}};
     private cache:MovieListCache = {upcoming:[], theaters:[]}
