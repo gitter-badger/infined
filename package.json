@@ -41,7 +41,8 @@
     "xpath": "0.0.9"
   },
   "scripts": {
-    "test": "gulp lint",
+    "gulp": "gulp lint",
+    "grunt": "grunt travis --verbose",
     "start": "node ./www/start"
   },
   "cordovaPlugins": [
