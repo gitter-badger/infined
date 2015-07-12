@@ -199,6 +199,7 @@ module.exports = function (grunt) {
   
   grunt.registerTask('default', ['compile']);
   grunt.registerTask('watch', ['watch']);
-  grunt.registerTask('compile', ['clean:all', 'includereplace', 'html-prettyprinter', 'copy', 'sass', 'typescript']);
+  grunt.registerTask('compile', ['includereplace', 'html-prettyprinter', 'copy', 'sass', 'typescript']);
+  grunt.registerTask('clean', ['clean:all']);
 
 };
