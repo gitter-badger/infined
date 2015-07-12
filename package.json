@@ -17,7 +17,7 @@
   "homepage": "http://www.identy.org",
   "repository": {
     "type": "git",
-    "url": "git clone https://identy@bitbucket.org/identy/infined.git"
+    "url": "git clone https://github.com/identy/infined.git"
   },
   "devDependencies": {
     "async": "1.0.0",
