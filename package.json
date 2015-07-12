@@ -71,5 +71,9 @@
   "cordovaPlatforms": [
     "ios",
     "android"
-  ]
+  ],
+  "dependencies": {
+    "ionic-material": "0.4.2",
+    "ion-md-input": "0.0.2"
+  }
 }
