@@ -2,17 +2,15 @@ sudo: required
 language: node_js
 node_js:
     - "0.12"
-    - "0.11"
-    - "0.10"
 services:
   - mongodb
-before_install:
-    - npm install
 before_script:
+    - npm install
     - npm install grunt-cli
     - npm install grunt-contrib-sass
     - grunt
     - export PATH=$PATH:$PWD/node_modules/.bin
     - gulp
+before_install:
 after_install:
     - npm start
