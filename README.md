@@ -19,5 +19,6 @@ https://travis-ci.org/identy/infined.svg
 
 ### identy :: LINKS []? ###
 
+* [Learn Git](https://www.atlassian.com/git/)
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
