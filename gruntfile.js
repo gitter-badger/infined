@@ -4,15 +4,15 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     clean: {
-      all:   ['www/public/'],
+      all:   ['www/public'],
       index:  ['www/public/index.html'],
-      images:   ['www/public/images/'],
-      javascripts:    ['www/public/javascripts/'],
-      libraries:   ['www/public/libraries/'],
-      service:   ['www/public/service/'],
-      stylesheets:   ['www/public/stylesheets/'],
-      templates:   ['www/public/templates/'],
-      typescripts: ['www/public/typescripts/']
+      images:   ['www/public/images'],
+      javascripts:    ['www/public/javascripts'],
+      libraries:   ['www/public/libraries'],
+      service:   ['www/public/service'],
+      stylesheets:   ['www/public/stylesheets'],
+      templates:   ['www/public/templates'],
+      typescripts: ['www/public/typescripts']
     },
     
     includereplace: {
