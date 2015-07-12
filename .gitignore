@@ -1,10 +1,11 @@
+npm-debug.log
 .DS_Store
 .idea
 .sass-cache
 abstract
 node_modules
 bower_components
-www/public
 plugins
 platforms
-npm-debug.log
+www/public
+
