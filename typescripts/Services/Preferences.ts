@@ -30,7 +30,7 @@
 
         get apiUrl(): string {
             //return localStorage.getItem(Preferences.API_URL);
-            return "sample-app.justin-credible.net/api";
+            return "infined.identy.org/api";
         }
 
         get userId(): string {
