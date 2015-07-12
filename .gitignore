@@ -5,4 +5,4 @@ npm-debug.log
 .sass-cache
 build
 abstract
-www/public
+www\public
