@@ -119,32 +119,36 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['www/sass/**'],
-        tasks: ['clean:css', 'sass']
+        tasks: ['clean:styles', 'sass']
       },
       libraries: {
         files: ['www/libraries/**'],
-        tasks: ['clean:lib', 'copy:libraries']
+        tasks: ['clean:libraries', 'copy:libraries']
       },
       images: {
         files: ['www/images/**'],
-        tasks: ['clean:gfx', 'copy:images']
+        tasks: ['clean:images', 'copy:images']
       },
       typescript: {
         files: ['www/types/**'],
-        tasks: ['clean:js', 'typescript']
+        tasks: ['clean:scripts', 'typescript']
       }
     }
     
   });
 
-  grunt.loadNpmTasks('grunt-include-replace');
+  grunt.loadNpmTasks('grunt-typescript');
+  
   grunt.loadNpmTasks('grunt-html-prettyprinter');
+  
+  grunt.loadNpmTasks('grunt-include-replace');
+  
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-typescript');
+
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-typescript');
+
   
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('compile', ['clean:all', 'includereplace', 'html-prettyprinter', 'copy', 'sass', 'typescript']);
