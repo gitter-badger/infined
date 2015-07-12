@@ -55,7 +55,7 @@
     "grunt": "grunt travis --verbose",
     "start": "node ./www/start",
     "debug": "node ./www/start",
-    "test": "node ./www/start"
+    "test": "gulp lint"
   },
   "cordovaPlugins": [
     "cordova-plugin-device@1.0.1",
