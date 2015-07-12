@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/identy/infined.svg?branch=master)](https://travis-ci.org/identy/infined)
 [![Dependencies](https://david-dm.org/identy/infined.svg)](https://david-dm.org/identy/infined)
-
+[![devDependency Status](https://david-dm.org/identy/infined/dev-status.svg)](https://david-dm.org/identy/infined#info=devDependencies)
 =======
 # infined
 identy :: backbone [netcore vscode asp5 ionic material typesctipt html5 cordova ngCordova ionic angular framework7 gulp grunt nodejs] [draft]
