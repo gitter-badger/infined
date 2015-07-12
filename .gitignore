@@ -7,5 +7,11 @@ platforms
 plugins
 node_modules
 bower_components
-www/public
+www/public/images
+www/public/javascripts
+www/public/libraries
+www/public/service
+www/public/stylesheets
+www/public/templates
+www/public/index.html
 
