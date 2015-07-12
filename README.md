@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/identy/infined.svg?branch=master)](https://travis-ci.org/identy/infined)
+[![Coverage Status](https://coveralls.io/repos/identy/infined/badge.svg?branch=master&service=github)](https://coveralls.io/github/identy/infined?branch=master)
 [![Dependencies](https://david-dm.org/identy/infined.svg)](https://david-dm.org/identy/infined)
 [![devDependency Status](https://david-dm.org/identy/infined/dev-status.svg)](https://david-dm.org/identy/infined#info=devDependencies)
 =======
