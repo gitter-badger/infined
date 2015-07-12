@@ -100,7 +100,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'www/',
           src: ['typings/angular/**', 'typings/jquery/**'],
-          dest: 'www/public/javascripts',
+          dest: 'www/typings',
           ext: '.ts'
         }] 
       }  
