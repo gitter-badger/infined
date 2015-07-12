@@ -5,7 +5,7 @@ module org.identy.infined {
      * Used to define all of the client-side routes for the application.
      * This maps routes to the controller/view that should be used.
      */
-    export class RouteConfig {
+    export class Routes {
 
         public static setupRoutes($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider): void {
 

@@ -338,7 +338,7 @@ module org.identy.infined.Application {
         $httpProvider.interceptors.push(Services.HttpInterceptor.ID);
 
         // Setup all of the client side routes and their controllers and views.
-        RouteConfig.setupRoutes($stateProvider, $urlRouterProvider);
+        Routes.setupRoutes($stateProvider, $urlRouterProvider);
 
         // If mock API calls are enabled, then we'll add a random delay for all HTTP requests to simulate
         // network latency so we can see the spinners and loading bars. Useful for demo purposes.
