@@ -1,4 +1,4 @@
-/// <reference path="ftapp.ts" />
+/// <reference path="application.ts" />
 /// <reference path="pages/IndexPageController.ts" />
 /// <reference path="pages/DetailsPageController.ts" />
 
@@ -23,7 +23,7 @@ module ft{
     private fw7App:Framework7App;
     private mainView:Framework7View;
     private fw7ViewOptions:Framework7ViewOptions;
-    private angApp:ftapp;
+    private angApp:application;
     
     constructor(){
       this.configApp();
@@ -44,7 +44,7 @@ module ft{
       this.mainView = this.fw7App.addView('.view-main', this.fw7ViewOptions);
       
       // Init Angular
-      this.angApp = new ftapp( 'ft', [] );
+      this.angApp = new application( 'ft', [] );
       
       // Init controllers
       this.angApp.addController( 'IndexPageController', ft.pages.IndexPageController);

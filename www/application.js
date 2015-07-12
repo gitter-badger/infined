@@ -16,7 +16,7 @@ application.set('views', path.join(__dirname, 'views'));
 application.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
-application.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+application.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
 application.use(logger('dev'));
 application.use(bodyParser.json());
 application.use(bodyParser.urlencoded({ extended: false }));

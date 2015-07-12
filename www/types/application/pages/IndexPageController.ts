@@ -1,4 +1,4 @@
-/// <reference path="../../angular/angular.d.ts"/>
+/// <reference path="/infined/typings/angular/angular.d.ts"/>
 /// <reference path="PageController.ts"/>
 /// <reference path="../model/movies/Movies.ts"/>
 

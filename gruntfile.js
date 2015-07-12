@@ -13,7 +13,7 @@ module.exports = function (grunt) {
       views:  ['www/public/index.html']
     },
     
-    'index-prettyinclude': {
+    includereplace: {
       dist: {
         options: {},
         src: 'www/views/index.html',
@@ -21,19 +21,19 @@ module.exports = function (grunt) {
       }
     },
     
-    'index-prettyprinter': {
+    'html-prettyprinter': {
       single: {
         src: 'www/views/inde.x.html',
-        dest: 'www/index.html'
+        dest: 'www/public/index.html'
       }
     },
     
-    'public': {
+    copy: {
       main: {
         files: [
           {
             expand: true,
-            src: ['www/libraries/**', 'www/images/**', 'www/services/**'],
+            src: ['www/images/**', 'www/libraries/**', 'www/services/**'],
             cwd: 'www/',
             dest: 'public/'
           }
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
             expand: true,
             src: ['libraries/**'],
             cwd: 'www/',
-            dest: 'public/libraries/'
+            dest: 'www/public/'
           }
         ]
       },
@@ -55,7 +55,17 @@ module.exports = function (grunt) {
             expand: true,
             src: ['images/**'],
             cwd: 'www/',
-            dest: 'public/images/'
+            dest: 'www/public/'
+          }
+        ]
+      },
+      services: {
+        files: [
+          {
+            expand: true,
+            src: ['services/**'],
+            cwd: 'www/',
+            dest: 'www/public/'
           }
         ]
       }
@@ -92,7 +102,7 @@ module.exports = function (grunt) {
         options: {
           module: 'amd', //or commonjs 
           target: 'es5', //or es3 
-          basePath: 'src/ts/',
+          rootDir: 'www/types/',
           declaration: false,
           sourceMap: false
         }
@@ -105,7 +115,7 @@ module.exports = function (grunt) {
       },
       views: {
         files: ['www/index.html', 'www/public/**'],
-        tasks: ['clean:views', 'html-prettyinclude', 'html-prettyprinter']
+        tasks: ['clean:views', 'includereplace', 'html-prettyprinter']
       },
       sass: {
         files: ['www/sass/**'],
@@ -137,6 +147,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-typescript');
   
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('compile', ['clean:all', 'index-prettyinclude', 'index-prettyprinter', 'public', 'sass', 'typescript']);
+  grunt.registerTask('compile', ['clean:all', 'includereplace', 'html-prettyprinter', 'copy', 'sass', 'typescript']);
 
 };

@@ -1,7 +1,7 @@
 module ft.model.movies{
   
   export interface MovieTypeState{
-    active:String;
+    active:string;
   }
   
   export interface MovieType{

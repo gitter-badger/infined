@@ -7,13 +7,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>fresh tomatoes | f7 angularJS </title>
     <!-- Path to Framework7 Library CSS-->
-    <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
+    <link rel="stylesheet" href="libraries/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
   </head>
   <body>
     
-    @@include('html/header.html')
+    @@include('header.html')
     
     <!-- Views-->
     <div class="views">
@@ -21,16 +21,16 @@
       <!-- Your main view, should have "view-main" class-->
       <div class="view view-main">
         
-        @@include('html/navi.html')
+        @@include('navi.html')
         
         <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
         <div class="pages navbar-through toolbar-through">
           
           <!-- - [Page 1] ---------------------------------------- -->
-          @@include('html/pages/indexpage.html')
+          @@include('pages/indexpage.html')
           
           <!-- - [Page 2] ---------------------------------------- -->
-          @@include('html/pages/detailspage.html')
+          @@include('pages/detailspage.html')
           
         </div>
         
@@ -43,7 +43,7 @@
       </div>
     </div>
     
-    @@include('html/scripts.html')
+    @@include('scripts.html')
     
   </body>
 </html>

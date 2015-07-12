@@ -1,4 +1,4 @@
-/// <reference path="../../angular/angular.d.ts"/>
+/// <reference path="/infined/typings/angular/angular.d.ts"/>
 
 module ft.pages{
   
