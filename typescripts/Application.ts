@@ -45,7 +45,7 @@ module org.identy.infined.Application {
 
         // Define the top level Angular module for the application.
         // Here we also specify the Angular modules this module depends upon.
-        ngModule = angular.module("org.identy.infined.Application", ["ui.router", "ionic", "ngMockE2E"]);
+        ngModule = angular.module("org.identy.infined.Application", ["ui.router", "ionic", "ngMockE2E", "ionic-material"]);
 
         // Define our constants.
         ngModule.constant("isRipple", !!(window.parent && window.parent.ripple));
