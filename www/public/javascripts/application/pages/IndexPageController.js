@@ -38,8 +38,8 @@ var ft;
             __extends(IndexPageController, _super);
             function IndexPageController($scope, $http) {
                 _super.call(this, $scope);
-                this.API_URL_UPCOMINGLIST = 'ws/upcoming.json'; // Use mocked data
-                this.API_URL_THEATERSLIST = 'ws/theaters.json'; // Use mocked data
+                this.API_URL_UPCOMINGLIST = '../../services/upcoming.json'; // Use mocked data
+                this.API_URL_THEATERSLIST = '../../services/theaters.json'; // Use mocked data
                 this.movies = [];
                 this.tabState = { upcoming: { active: ' active' }, theater: { active: '' } };
                 this.cache = { upcoming: [], theaters: [] };
