@@ -4,6 +4,7 @@ node_js:
     - "0.10"
 before_script:
     - npm install -g grunt-cli
+    - npm install grunt-contrib-sass
     - grunt
     - export PATH=$PATH:$PWD/node_modules/.bin
     - gulp
