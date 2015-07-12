@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "description": "starter ionic TypeScript.",
   "author": "Sigfrido Rodríguez Santos",
+  "keywords": [
+    "Ionic",
+    "Material",
+    "Design",
+    "Angular",
+    "Framework",
+    "Hybrid",
+    "Apps",
+    "Mobile"
+  ],
   "license": "MIT",
   "homepage": "http://www.identy.org",
   "repository": {
@@ -15,9 +25,16 @@
     "bower-installer": "1.2.0",
     "cordova": "5.1.1",
     "ionic": "1.5.5",
+    "ionic-material": "0.4.2",
+    "ion-md-input": "0.0.2",
     "tsd": "0.6.1",
     "tslint": "2.2.0-beta",
     "typescript": "1.5.0-beta",
+    "run-sequence": "^1.1.1",
+    "shelljs": "0.3.0",
+    "del": "1.2.0",
+    "xmldom": "0.1.19",
+    "xpath": "0.0.9",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.0",
@@ -33,12 +50,7 @@
     "gulp-sourcemaps": "1.5.2",
     "gulp-tslint": "3.0.1-beta",
     "gulp-typescript": "2.7.5",
-    "gulp-util": "2.2.14",
-    "run-sequence": "^1.1.1",
-    "shelljs": "0.3.0",
-    "del": "1.2.0",
-    "xmldom": "0.1.19",
-    "xpath": "0.0.9"
+    "gulp-util": "2.2.14"
   },
   "scripts": {
     "gulp": "gulp lint",
