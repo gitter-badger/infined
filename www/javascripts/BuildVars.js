@@ -1,0 +1,1 @@
+window.declare = {"majorVersion":0,"minorVersion":0,"buildVersion":1,"debug":true,"buildTimestamp":"Sun, 12 Jul 2015 03:14:37 GMT"};

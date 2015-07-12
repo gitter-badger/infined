@@ -5,12 +5,13 @@ module.exports = function (grunt) {
 
     clean: {
       all:   ['www/public'],
+      index:  ['www/public/index.html'],
       images:   ['www/public/images/'],
+      javascripts:    ['www/public/javascripts/'],
       libraries:   ['www/public/libraries/'],
-      scripts:    ['www/public/javascripts/'],
-      styles:   ['www/public/stylessheets/'],
-      types: ['www/public/types/'],
-      views:  ['www/public/index.html']
+      service:   ['www/public/service/'],
+      stylesheets:   ['www/public/stylesheets/'],
+      typescripts: ['www/public/typescripts/']
     },
     
     includereplace: {
@@ -33,19 +34,9 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            src: ['www/images/**', 'www/libraries/**', 'www/services/**'],
+            src: ['www/images/**', 'www/javascripts/**', 'www/stylesheets/**', 'www/libraries/**', 'www/service/**'],
             cwd: 'www/',
             dest: 'public/'
-          }
-        ]
-      },
-      libraries: {
-        files: [
-          {
-            expand: true,
-            src: ['libraries/**'],
-            cwd: 'www/',
-            dest: 'www/public/'
           }
         ]
       },
@@ -59,29 +50,62 @@ module.exports = function (grunt) {
           }
         ]
       },
-      services: {
+      javascripts: {
         files: [
           {
             expand: true,
-            src: ['services/**'],
+            src: ['javascripts/**'],
+            cwd: 'www/',
+            dest: 'www/public/'
+          }
+        ]
+      },
+      libraries: {
+        files: [
+          {
+            expand: true,
+            src: ['libraries/**'],
+            cwd: 'www/',
+            dest: 'www/public/'
+          }
+        ]
+      },
+      service: {
+        files: [
+          {
+            expand: true,
+            src: ['service/**'],
+            cwd: 'www/',
+            dest: 'www/public/'
+          }
+        ]
+      },
+      stylesheets: {
+        files: [
+          {
+            expand: true,
+            src: ['stylesheets/**'],
             cwd: 'www/',
             dest: 'www/public/'
           }
         ]
       }
+
     },
-    
-    types: {
+
+/*    
+    typings: {
       dist: {
         files: [{
           expand: true,
           cwd: 'www/',
-          src: ['types/angular/**', 'types/jquery/**'],
+          src: ['typings/angular/**', 'typings/jquery/**'],
           dest: 'www/public/javascripts',
           ext: '.ts'
         }] 
       }  
     },
+*/
 
     sass: {
       dist: {
@@ -97,12 +121,12 @@ module.exports = function (grunt) {
     
     typescript: {
       base: {
-        src: ['www/types/**/*.ts'],
+        src: ['www/typescripts/**/*.ts'],
         dest: 'www/public/javascripts/',
         options: {
           module: 'amd', //or commonjs 
           target: 'es5', //or es3 
-          rootDir: 'www/types/',
+          rootDir: 'www/typescripts/',
           declaration: false,
           sourceMap: false
         }
@@ -113,13 +137,17 @@ module.exports = function (grunt) {
       options: {
         livereload: true
       },
-      views: {
+      index: {
         files: ['www/index.html', 'www/public/**'],
-        tasks: ['clean:views', 'includereplace', 'html-prettyprinter']
+        tasks: ['clean:index', 'includereplace', 'html-prettyprinter']
       },
       sass: {
         files: ['www/sass/**'],
-        tasks: ['clean:styles', 'sass']
+        tasks: ['clean:sass', 'sass']
+      },
+      stylesheets: {
+        files: ['www/stylesheets/**'],
+        tasks: ['clean:stylesheets', 'stylesheets']
       },
       libraries: {
         files: ['www/libraries/**'],
@@ -129,9 +157,17 @@ module.exports = function (grunt) {
         files: ['www/images/**'],
         tasks: ['clean:images', 'copy:images']
       },
-      typescript: {
-        files: ['www/types/**'],
-        tasks: ['clean:scripts', 'typescript']
+      javascripts: {
+        files: ['www/javascripts/**'],
+        tasks: ['clean:javascripts', 'javascripts']
+      },
+      service: {
+        files: ['www/service/**'],
+        tasks: ['clean:service', 'service']
+      },
+      typescripts: {
+        files: ['www/typescripts/**'],
+        tasks: ['clean:typescripts', 'typescript']
       }
     }
     

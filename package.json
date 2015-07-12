@@ -1,7 +1,23 @@
 {
-  "name": "ft",
+  "name": "infined",
   "version": "0.1.0",
+  "description": "starter ionic TypeScript.",
+  "author": "Sigfrido Rodríguez Santos",
+  "license": "MIT",
+  "homepage": "http://www.identy.org",
+  "repository": {
+    "type": "git",
+    "url": "git clone https://identy@bitbucket.org/identy/infined.git"
+  },
   "devDependencies": {
+    "async": "1.0.0",
+    "bower": "1.4.1",
+    "bower-installer": "1.2.0",
+    "cordova": "5.1.1",
+    "ionic": "1.5.5",
+    "tsd": "0.6.1",
+    "tslint": "2.2.0-beta",
+    "typescript": "1.5.0-beta",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.0",
@@ -11,6 +27,37 @@
     "grunt-include-replace": "^3.0.0",
     "grunt-prettify": "^0.4.0",
     "grunt-typescript": "^0.6.2",
-    "typescript": "^1.4.1"
-  }
+    "gulp": "3.9.0",
+    "gulp-concat": "2.2.0",
+    "gulp-rename": "1.2.0",
+    "gulp-sourcemaps": "1.5.2",
+    "gulp-tslint": "3.0.1-beta",
+    "gulp-typescript": "2.7.5",
+    "gulp-util": "2.2.14",
+    "run-sequence": "^1.1.1",
+    "shelljs": "0.3.0",
+    "del": "1.2.0",
+    "xmldom": "0.1.19",
+    "xpath": "0.0.9"
+  },
+  "scripts": {
+    "test": "gulp lint"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-device@1.0.1",
+    "cordova-plugin-console@1.0.1",
+    "cordova-plugin-whitelist@1.0.0",
+    "cordova-plugin-splashscreen@2.1.0",
+    "cordova-plugin-file@2.1.0",
+    "cordova-plugin-dialogs@1.1.1",
+    "cordova-plugin-inappbrowser@1.0.1",
+    "com.ionic.keyboard@1.0.4",
+    "nl.x-services.plugins.toast@2.0.4",
+    "com.verso.cordova.clipboard@0.1.0",
+    "org.pbernasconi.progressindicator@1.1.0"
+  ],
+  "cordovaPlatforms": [
+    "ios",
+    "android"
+  ]
 }

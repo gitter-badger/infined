@@ -6,3 +6,5 @@ npm-debug.log
 build
 abstract
 www\public
+bower_components
+plugins
