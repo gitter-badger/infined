@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* GET index listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  // res.send('...');
+  res.render('index', { title: 'infined' });
 });
 
 module.exports = router;
