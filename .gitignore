@@ -3,9 +3,9 @@ npm-debug.log
 .idea
 .sass-cache
 abstract
+platforms
+plugins
 node_modules
 bower_components
-plugins
-platforms
 www/public
 
