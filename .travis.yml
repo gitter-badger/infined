@@ -3,4 +3,5 @@ node_js:
     - "0.10"
 before_script:
     - export PATH=$PATH:$PWD/node_modules/.bin
+    - grunt
     - gulp

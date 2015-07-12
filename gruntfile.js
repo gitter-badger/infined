@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     clean: {
-      all:   ['www/public'],
+      all:   ['www/public/'],
       index:  ['www/public/index.html'],
       images:   ['www/public/images/'],
       javascripts:    ['www/public/javascripts/'],
@@ -197,7 +197,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
 
   
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['compile']);
+  grunt.registerTask('watch', ['watch']);
   grunt.registerTask('compile', ['clean:all', 'includereplace', 'html-prettyprinter', 'copy', 'sass', 'typescript']);
 
 };
