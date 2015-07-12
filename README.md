@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
@@ -27,3 +28,8 @@ This README would normally document whatever steps are necessary to get your app
 
 * Repo owner or admin
 * Other community or team contact
+=======
+# infined
+ngCordova ionic angular framework7 gulp grunt nodejs [draft]
+
+>>>>>>> 65639d28ffeab8e9ac50035b2f00d66f4d188b1c
