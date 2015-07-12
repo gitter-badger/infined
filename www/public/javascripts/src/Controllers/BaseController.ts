@@ -1,4 +1,4 @@
-module org.identy.infined.Controllers {
+module JustinCredible.SampleApp.Controllers {
 
     /**
      * This is the base controller that all other controllers should utilize.

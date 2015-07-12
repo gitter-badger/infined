@@ -1,4 +1,4 @@
-module org.identy.infined.Models {
+module JustinCredible.SampleApp.Models {
 
     /**
      * A simple class that can be used to define a key/value pair of objects.

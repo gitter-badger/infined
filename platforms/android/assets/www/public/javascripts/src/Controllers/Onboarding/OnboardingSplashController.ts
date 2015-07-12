@@ -1,4 +1,4 @@
-module org.identy.infined.Controllers {
+module JustinCredible.SampleApp.Controllers {
 
     export class OnboardingSplashController extends BaseController<ViewModels.EmptyViewModel> {
 

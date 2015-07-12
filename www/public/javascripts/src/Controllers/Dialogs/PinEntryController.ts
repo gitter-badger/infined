@@ -1,4 +1,4 @@
-module org.identy.infined.Controllers {
+module JustinCredible.SampleApp.Controllers {
 
     export class PinEntryController extends BaseDialogController<ViewModels.PinEntryViewModel, Models.PinEntryDialogModel, Models.PinEntryDialogResultModel> {
 

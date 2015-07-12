@@ -1,4 +1,4 @@
-module org.identy.infined.Services {
+module JustinCredible.SampleApp.Services {
 
     /**
      * Provides a common set of helper/utility methods.

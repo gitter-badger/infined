@@ -1,4 +1,4 @@
-module org.identy.infined.Directives {
+module JustinCredible.SampleApp.Directives {
 
     //#region TypeScript Declarations
 

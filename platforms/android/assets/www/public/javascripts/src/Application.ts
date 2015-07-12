@@ -1,5 +1,5 @@
 
-module org.identy.infined.Application {
+module JustinCredible.SampleApp.Application {
 
     //#region Variables
 
@@ -31,11 +31,11 @@ module org.identy.infined.Application {
         window.onerror = window_onerror;
 
         versionInfo = {
-            applicationName: "infined",
-            copyrightInfoUrl: "https://www.identy.org/LICENSE",
-            websiteUrl: "http://www.identy.org",
-            githubUrl: "https://github.com/identy",
-            email: "identy@identy.org",
+            applicationName: "Sample App",
+            copyrightInfoUrl: "https://github.com/Justin-Credible/Ionic-TypeScript-Starter/blob/master/LICENSE",
+            websiteUrl: "http://www.justin-credible.net",
+            githubUrl: "https://github.com/Justin-Credible",
+            email: "justin.unterreiner@gmail.com",
             majorVersion: window.declare.majorVersion,
             minorVersion: window.declare.minorVersion,
             buildVersion: window.declare.buildVersion,
@@ -45,7 +45,7 @@ module org.identy.infined.Application {
 
         // Define the top level Angular module for the application.
         // Here we also specify the Angular modules this module depends upon.
-        ngModule = angular.module("org.identy.infined.Application", ["ui.router", "ionic", "ngMockE2E"]);
+        ngModule = angular.module("JustinCredible.SampleApp.Application", ["ui.router", "ionic", "ngMockE2E"]);
 
         // Define our constants.
         ngModule.constant("isRipple", !!(window.parent && window.parent.ripple));

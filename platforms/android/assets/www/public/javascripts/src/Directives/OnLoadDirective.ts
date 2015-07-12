@@ -1,4 +1,4 @@
-module org.identy.infined.Directives {
+module JustinCredible.SampleApp.Directives {
 
     /**
      * A directive for handling an element's onload event (eg an image tag).

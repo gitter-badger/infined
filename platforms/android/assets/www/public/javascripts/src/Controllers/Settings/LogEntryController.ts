@@ -1,4 +1,4 @@
-module org.identy.infined.Controllers {
+module JustinCredible.SampleApp.Controllers {
 
     export interface ILogEntryStateParams {
         id: string;

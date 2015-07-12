@@ -1,4 +1,4 @@
-module org.identy.infined.Services {
+module JustinCredible.SampleApp.Services {
 
     /**
      * This is a custom interceptor for Angular's $httpProvider.

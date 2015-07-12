@@ -1,5 +1,5 @@
 
-module org.identy.infined {
+module JustinCredible.SampleApp {
 
     /**
      * Used to define all of the client-side routes for the application.

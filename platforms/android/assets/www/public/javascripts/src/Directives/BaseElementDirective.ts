@@ -1,4 +1,4 @@
-module org.identy.infined.Directives {
+module JustinCredible.SampleApp.Directives {
 
     /**
      * Describes what our element directive objects look like.

@@ -1,4 +1,4 @@
-module org.identy.infined.Filters {
+module JustinCredible.SampleApp.Filters {
 
     /**
      * Formats numbers greater than one thousand to include the K suffix.

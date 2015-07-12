@@ -1,4 +1,4 @@
-module org.identy.infined.Models {
+module JustinCredible.SampleApp.Models {
 
     export class PinEntryDialogResultModel {
         matches: boolean;

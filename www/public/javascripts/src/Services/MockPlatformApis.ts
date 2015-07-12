@@ -1,4 +1,4 @@
-module org.identy.infined.Services {
+module JustinCredible.SampleApp.Services {
 
     /**
      * Provides mock implementation APIs that may not be available on all platforms.

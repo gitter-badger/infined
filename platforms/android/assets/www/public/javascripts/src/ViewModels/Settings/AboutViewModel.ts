@@ -1,4 +1,4 @@
-module org.identy.infined.ViewModels {
+module JustinCredible.SampleApp.ViewModels {
 
     export class AboutViewModel {
         public logoClickCount: number;

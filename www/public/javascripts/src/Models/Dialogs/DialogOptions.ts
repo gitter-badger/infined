@@ -1,4 +1,4 @@
-module org.identy.infined.Models {
+module JustinCredible.SampleApp.Models {
 
     /**
      * Used to specify options for a dialog.

@@ -1,5 +1,5 @@
 ﻿
-/*globals chrome*/
+/*globals JustinCredible, chrome*/
 
 // Here any special logic can be executed before boostrapping the application.
 

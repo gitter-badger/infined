@@ -1,4 +1,4 @@
-module org.identy.infined.ViewModels {
+module JustinCredible.SampleApp.ViewModels {
 
     /**
      * A ViewModel that has no properties. Useful for controllers that
