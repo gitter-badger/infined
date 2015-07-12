@@ -10,7 +10,6 @@ identy :: backbone [netcore vscode asp5 ionic material typesctipt html5 cordova 
 [![Dependencies](https://david-dm.org/identy/infined.svg)](https://david-dm.org/identy/infined)
 [![devDependency Status](https://david-dm.org/identy/infined/dev-status.svg)](https://david-dm.org/identy/infined#info=devDependencies)
 [![Circle CI](https://circleci.com/gh/identy/infined.svg?style=shield&circle-token=d6262ca6446110eddc3e5d6385520620b301274b)](https://circleci.com/gh/identy/infined)
-=======
 
 # ABSTRACT #
 
