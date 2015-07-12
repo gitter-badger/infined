@@ -1,4 +1,4 @@
-/// <reference path="www/typings/angular/angular.d.ts"/>
+/// <reference path="../../typings/angular/angular.d.ts"/>
 module ft{
   export class application{
     application: ng.IModule;
