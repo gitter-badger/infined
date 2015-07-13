@@ -24,3 +24,7 @@ identy :: backbone [netcore vscode asp5 ionic material typesctipt html5 cordova 
 * [Learn Git](https://www.atlassian.com/git/)
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/identy/infined/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
