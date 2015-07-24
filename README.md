@@ -1,5 +1,7 @@
 
 # infined
+
+[![Join the chat at https://gitter.im/identy/infined](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/identy/infined?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 identy :: backbone [netcore vscode asp5 ionic material typesctipt html5 cordova ngCordova ionic angular framework7 gulp grunt nodejs] [draft]
 
 > 65639d28ffeab8e9ac50035b2f00d66f4d188b1c
